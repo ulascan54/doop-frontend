@@ -1,9 +1,10 @@
-import Button from "@mui/material/Button"
+import Navigation from "./components/Navigation/Navigation"
+import HomePage from "./pages/HomePage/HomePage"
 function App() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Button variant="contained">Hello world</Button>
+      <Navigation />
+      <HomePage />
     </div>
   )
 }
