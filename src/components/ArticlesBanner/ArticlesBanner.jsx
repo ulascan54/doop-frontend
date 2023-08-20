@@ -3,7 +3,7 @@ import React from "react"
 
 function ArticlesBanner() {
   return (
-    <div className="w-full h-60 md:h-[50vh] lg:h-[70vh]  bg-[#1B3764] text-white flex flex-col items-center justify-center text-center">
+    <div className="w-full h-60 md:h-[30vh] lg:h-[60vh]  bg-[#1B3764] text-white flex flex-col items-center justify-center text-center">
       <Typography variant="h3" component="h2" className="!m-4">
         Articles
       </Typography>
