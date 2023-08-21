@@ -8,7 +8,7 @@ import { Link } from "@mui/material"
 
 export default function ArticlesCard() {
   return (
-    <div className="flex items-center justify-center mb-10 relative top-20">
+    <div className="flex items-center justify-center mb-10">
       <Card sx={{ maxWidth: 280 }}>
         <CardMedia
           sx={{ height: 200 }}

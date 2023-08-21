@@ -4,7 +4,7 @@ import { Grid } from "@mui/material"
 
 function ArticlesCardsSection() {
   return (
-    <div className="md:w-[80%] flex justify-center items-center m-auto">
+    <div className="md:w-[80%] flex justify-center items-center m-auto relative top-6 py-20">
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}

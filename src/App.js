@@ -1,3 +1,4 @@
+import Footer from "./components/Footer/Footer"
 import Navigation from "./components/Navigation/Navigation"
 import ArticlesPage from "./pages/ArticlesPage/ArticlesPage"
 import HomePage from "./pages/HomePage/HomePage"
@@ -6,6 +7,7 @@ function App() {
     <div>
       <Navigation />
       <ArticlesPage />
+      <Footer />
     </div>
   )
 }
