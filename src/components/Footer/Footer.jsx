@@ -8,7 +8,7 @@ function Footer() {
   return (
     <div>
       <Grid
-        className="!bg-[#1B3764] text-white text-center mt-10 md:px-40 !flex !justify-between"
+        className="!bg-[#1B3764] text-white text-center md:px-40 !flex !justify-between"
         container
         sx={{ bgcolor: "black", color: "white", py: 3 }}
       >

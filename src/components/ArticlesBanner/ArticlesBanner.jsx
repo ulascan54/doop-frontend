@@ -5,10 +5,10 @@ import bannertest from "../../bannertest.jpg"
 function ArticlesBanner() {
   return (
     <div
-      className="w-full h-60 md:h-[30vh] lg:h-[60vh]  text-white flex flex-col items-center   justify-center text-center "
+      className="w-full h-60 md:h-[30vh] lg:h-[60vh]  text-white flex flex-col items-center justify-center text-center "
       style={{
         background: `url("${bannertest}") no-repeat`,
-        backgroundSize: "cover center center",
+        backgroundSize: "cover",
         backgroundColor: "#1B3764",
       }}
     >

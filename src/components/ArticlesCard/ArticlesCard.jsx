@@ -8,8 +8,8 @@ import { Link } from "@mui/material"
 
 export default function ArticlesCard() {
   return (
-    <div className="flex items-center justify-center mb-10">
-      <Card sx={{ maxWidth: 280 }}>
+    <div className="flex items-center justify-center mb-10 ">
+      <Card sx={{ maxWidth: 270 }} className="!shadow-lg">
         <CardMedia
           sx={{ height: 200 }}
           image="https://picsum.photos/200"
