@@ -2,18 +2,24 @@ import { Route, Routes } from "react-router-dom"
 import Footer from "./components/Footer/Footer"
 import Navigation from "./components/Navigation/Navigation"
 import ArticlesPage from "./pages/ArticlesPage/ArticlesPage"
-import Register from "./components/Register/Register"
-import Login from "./components/Login/Login"
+import AuthMain from "./components/Auth/Auth"
 function App() {
   return (
     <div>
-      <Navigation />
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/" element={<ArticlesPage />} />
+        <Route path="/login" element={<AuthMain />} />
+        <Route path="/register" element={<AuthMain />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Navigation />
+              <ArticlesPage />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
-      <Footer />
     </div>
   )
 }

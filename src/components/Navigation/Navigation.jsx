@@ -1,21 +1,16 @@
-import { Fragment, useEffect, useState } from "react"
+import { Fragment } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"
 import { navigation } from "./navigationData"
 import BookIcon from "@mui/icons-material/Book"
 import { Button } from "@mui/material"
-import Login from "../Login/Login"
+import { Link } from "react-router-dom"
 const user = false
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const handleOpen = () => {
-    setIsOpen(true)
-  }
-
   return (
     <Disclosure as="nav" className="bg-[#1B3764] lg:px-40">
       {({ open }) => (
@@ -144,20 +139,22 @@ export default function Navigation() {
                 )}
                 {!user && (
                   <>
-                    <Button
-                      variant="contained"
-                      className="!bg-[#fefefe] !text-black !mr-2"
-                    >
-                      Register
-                    </Button>
-                    <Button
-                      onClick={handleOpen}
-                      variant="contained"
-                      className="!bg-[#FFCA42] !text-black"
-                    >
-                      Login
-                    </Button>
-                    <Login isOpen={isOpen} setIsOpen={setIsOpen} />
+                    <Link to={"/register"}>
+                      <Button
+                        variant="contained"
+                        className="!bg-[#fefefe] !text-black !mr-2"
+                      >
+                        Register
+                      </Button>
+                    </Link>
+                    <Link to={"/login"}>
+                      <Button
+                        variant="contained"
+                        className="!bg-[#FFCA42] !text-black"
+                      >
+                        Login
+                      </Button>
+                    </Link>
                   </>
                 )}
               </div>
