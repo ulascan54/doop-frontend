@@ -1,15 +1,20 @@
-import { Fragment } from "react"
+import { Fragment, useEffect, useState } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"
 import { navigation } from "./navigationData"
 import BookIcon from "@mui/icons-material/Book"
 import { Button } from "@mui/material"
+import { Link } from "react-router-dom"
 const user = false
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
 export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false)
+  const handleOpen = () => {
+    setIsOpen(true)
+  }
   return (
     <Disclosure as="nav" className="bg-[#1B3764] lg:px-40">
       {({ open }) => (
@@ -28,9 +33,9 @@ export default function Navigation() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center  md:justify-start">
+              <div className="flex flex-1 items-center ml-6 md:ml-0">
                 <div className=" md:w-full md:flex md:justify-between ">
-                  <div className="flex flex-shrink-0 items-center">
+                  <div className="flex flex-shrink-0 items-center ">
                     <div className="w-10 h-10 flex justify-center items-center md:mr-2">
                       <BookIcon className=" !h-auto !w-full text-[#FFCA42] pl-3" />
                     </div>
@@ -137,12 +142,26 @@ export default function Navigation() {
                   </Menu>
                 )}
                 {!user && (
-                  <Button
-                    variant="contained"
-                    className="!bg-[#FFCA42] !text-black"
-                  >
-                    Login
-                  </Button>
+                  <>
+                    <Link to={"/register"}>
+                      <Button
+                        variant="contained"
+                        className="!bg-[#fefefe] !text-black !mr-2"
+                      >
+                        Register
+                      </Button>
+                    </Link>
+                    <Link to={"/login"}>
+                      <Button
+                        onClick={handleOpen}
+                        isOpen={isOpen}
+                        variant="contained"
+                        className="!bg-[#FFCA42] !text-black"
+                      >
+                        Login
+                      </Button>
+                    </Link>
+                  </>
                 )}
               </div>
             </div>
