@@ -39,7 +39,15 @@ function AuthMain() {
           </div>
         </div>
 
-        <div>{location.pathname === "/login" ? <Login /> : <Register />}</div>
+        <div className="flex justify-center items-center lg:w-[50%] w-full flex-col">
+          <div className="flex  items-center lg:hidden  ">
+            <div className="w-14 h-14 flex justify-center items-center">
+              <BookIcon className="!h-auto !w-full text-[#FFCA42]" />
+            </div>
+            <span className="text-[#1B3764] text-4xl  font-bold">PAGES</span>
+          </div>
+          {location.pathname === "/login" ? <Login /> : <Register />}
+        </div>
       </Box>
     </div>
   )
