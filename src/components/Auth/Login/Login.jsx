@@ -2,6 +2,7 @@ import React from "react"
 import { useFormik } from "formik"
 import validations from "./validations"
 import { TextField } from "@mui/material"
+import { Link } from "react-router-dom"
 
 function Login() {
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
@@ -44,7 +45,6 @@ function Login() {
             </div>
 
             <div>
-              <div className="flex items-center justify-between"></div>
               <div className="mt-2">
                 <TextField
                   error={
@@ -80,7 +80,7 @@ function Login() {
                 <div className="text-sm">
                   <a
                     href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
+                    className="font-semibold text-[#1B3764] hover:text-[#3768b8]"
                   >
                     Forgot password?
                   </a>
@@ -91,7 +91,7 @@ function Login() {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-[#1B3764] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#3768b8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B3764]"
               >
                 Sign in
               </button>
@@ -100,12 +100,12 @@ function Login() {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not a member?{" "}
-            <a
-              href="#"
-              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            <Link
+              to="/register"
+              className="font-semibold leading-6 text-[#1B3764] hover:text-[#3768b8]"
             >
               Register Now
-            </a>
+            </Link>
           </p>
         </div>
       </div>
