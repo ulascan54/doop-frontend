@@ -40,13 +40,19 @@ function AuthMain() {
         </div>
 
         <div className="flex justify-center items-center lg:w-[50%] w-full flex-col">
-          <div className="flex  items-center lg:hidden  ">
-            <div className="w-14 h-14 flex justify-center items-center">
+          <div className="absolute w-60 h-96 bg-[#B4C7E7] rounded-full -top-40 -right-20 lg:hidden z-10"></div>
+          <div className="absolute w-60 h-96 bg-[#B4C7E7] rounded-full -bottom-40 -left-20 lg:hidden z-10"></div>
+          <div className="absolute w-96 h-60 bg-[#FFCA42] rounded-full -top-40 -left-20 lg:hidden z-10"></div>
+          <div className="absolute w-96 h-60 bg-[#FFCA42] rounded-full -bottom-40 -right-20 lg:hidden z-10"></div>
+          <div className="flex  items-center lg:hidden z-20 ">
+            <div className="w-10 h-10 flex justify-center items-center">
               <BookIcon className="!h-auto !w-full text-[#FFCA42]" />
             </div>
-            <span className="text-[#1B3764] text-4xl  font-bold">PAGES</span>
+            <span className="text-[#1B3764] text-3xl  font-bold">PAGES</span>
           </div>
-          {location.pathname === "/login" ? <Login /> : <Register />}
+          <div className="z-20">
+            {location.pathname === "/login" ? <Login /> : <Register />}
+          </div>
         </div>
       </Box>
     </div>
