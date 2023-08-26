@@ -1,9 +1,9 @@
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import Modal from "@mui/material/Modal"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-function Login({ isOpen }) {
+function Login({ isOpen, setIsOpen }) {
   const style = {
     position: "absolute",
     top: "50%",
@@ -17,7 +17,13 @@ function Login({ isOpen }) {
   }
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(isOpen)
-  const handleClose = () => setOpen(isOpen)
+  useEffect(() => {
+    if (isOpen) handleOpen()
+  }, [isOpen])
+  const handleClose = () => {
+    setIsOpen(false)
+    setOpen(false)
+  }
   return (
     <Modal
       open={open}
@@ -27,7 +33,7 @@ function Login({ isOpen }) {
     >
       <Box sx={style}>
         <Typography id="modal-modal-title" variant="h6" component="h2">
-          {isOpen}
+          Lorem, ipsum dolor.
         </Typography>
         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
